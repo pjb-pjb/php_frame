@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 732271 */
+    src: url('//at.alicdn.com/t/font_732271_1iqcyxeeydw.eot');
+    src: url('//at.alicdn.com/t/font_732271_1iqcyxeeydw.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_732271_1iqcyxeeydw.woff') format('woff'),
+    url('//at.alicdn.com/t/font_732271_1iqcyxeeydw.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_732271_1iqcyxeeydw.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: 'iconfont';
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: #d6e2d8;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    color: #000;
+    font-size: 20px;
+}
+
+nav {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666666;
+}
+
+nav a {
+    padding: 0 5px;
+    color: #666666;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: #180e2b;
+    text-align: center;
+    line-height: 50px;
+    font-size: 13px;
+    color: #fff;
+    margin-top: -20px;
+}
+
+.index {
+    height: auto;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.index ul {
+    overflow: hidden;
+}
+
+.index content, .index h3 {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.index content {
+    cursor: pointer;
+}
+
+.index li {
+    float: left;
+    width: 250px;
+    border: 1px solid #ccc;
+    height: 160px;
+    position: relative;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 45px;
+    margin-bottom: 20px;
+}
+
+.index li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.index span {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: #000000;
+}
+
+.index a {
+    font-size: 14px;
+    color: #ff3e3e;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+.index time{
+    font-size: 13px;
+}
+
+form {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0 20px;
+}
+
+.form h3 {
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 50px;
+    font-size: 18px;
+    color: #000;
+    border-bottom: 1px solid #cccccc;
+    padding: 0 20px;
+}
+
+.form input[type=text] {
+    width: 97%;
+    height: 30px;
+    margin: 20px 0 0 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form textarea {
+    width: 97%;
+    margin: 20px 0 0 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-height: 50px;
+}
+
+.form button {
+    width: 80px;
+    height: 40px;
+    margin: 20px auto;
+    display: block;
+    background: #72008b;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.operation i {
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.full-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    box-sizing: border-box;
+    padding: 50px 50px;
+    display: none;
+}
+
+.full-text h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.full-text content {
+    width: 100%;
+    line-height: 30px;
+    color: #f66;
+    letter-spacing: 1px;
+}
+
+.full-text time {
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.close {
+    position: absolute;
+    /*width: 40px;*/
+    /*height: 40px;*/
+    top: 20px;
+    right: 30px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    color: yellowgreen;
+    transition: all 0.3s;
+}
+.close:hover{
+    color: red;
+    transform: rotate(180deg);
+}
+.full-text .del{
+    cursor: pointer;
+    transition: all 0.1s;
+    margin-left: 5px;
+}
+.full-text .del:hover{
+    color: red;
+}
+.enter{
+    animation: enter 0.2s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.leave{
+    animation: leave 0.3s ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes enter {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0;
+        z-index:-1000;
+    }
+}
+
+@keyframes leave {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+

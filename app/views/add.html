@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="form">
+        <h3>添加留言</h3>
+        <form action="/myFrame/index/save" method="post">
+            <input type="text" placeholder="请输入title" name="title">
+            <textarea placeholder="请输入content" name="content"></textarea>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+{% endblock %}

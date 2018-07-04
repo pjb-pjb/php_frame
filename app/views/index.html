@@ -1,0 +1,37 @@
+{% extends "layout.html"%}
+{% block content %}
+    <div class="index">
+        <ul>
+            {% for val in data %}
+            <li id="{{ val.id }}">
+                <h3>{{ val.title }}</h3>
+                <content>
+                    {{ val.content }}
+                </content>
+                <time>
+                    {{ val.createtime|date("Y-m-d H:i:s") }}
+                </time>
+                <div class="operation">
+                    <a>查看全文</a>
+                    <i class="iconfont" id="{{ val.id }}">&#xe61d;</i>
+                </div>
+                <span></span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="full-text">
+        <i class="iconfont close">&#xe60b;</i>
+        <h3>title</h3>
+        <content>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            的年纪啊倒萨大家萨达安康啥的大山打卡的可能洒家打开的看电视剧安康啥的卡单机啊看电脑卡死的啊肯定就是那科技时代安德森看上代价撒的技能萨达大家安康啥的卡死的卡都是你撒看见当看到撒看见打开大三开始的卡都是
+        </content>
+        <time>
+            <span>
+                2018-7-4
+            </span>
+            <i class="iconfont del">&#xe61d;</i>
+        </time>
+    </div>
+{% endblock %}
